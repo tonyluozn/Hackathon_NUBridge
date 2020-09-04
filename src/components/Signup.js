@@ -5,8 +5,7 @@ import {
   FormControl,
   FormLabel
 } from "react-bootstrap";
-import LoaderButton from "../components/LoaderButton";
-import { useFormFields } from "../libs/hooksLib";
+import { useFormFields } from "./hooksLib";
 import "./Signup.css";
 
 function Signup(props) {
