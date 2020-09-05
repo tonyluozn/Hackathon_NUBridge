@@ -10,7 +10,7 @@ function App(props) {
   const [data, setData] = useState(null);
 
   return (
-  <>
+  <div className="frame">
     <div className="NavContainer">
     <Navbar  expand="lg" className="NavBar">
       <Navbar.Brand href="/">
@@ -32,7 +32,7 @@ function App(props) {
     </div>
 
     {renderRoutes()}
-  </>
+    </div>
   );
 
   function renderRoutes() {

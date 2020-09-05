@@ -18,7 +18,7 @@ const Map = () =>{
         <MyComponent/>
         </Col>
         <Col span={8}>
-        <Card>haha</Card>
+        <Card hoverable title="Area Ratings" className="Card" boardered ={true}>haha</Card>
 
         </Col>
     </Row>
