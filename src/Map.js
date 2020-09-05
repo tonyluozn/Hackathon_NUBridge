@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { GoogleMap, LoadScript, Marker, Rectangle } from '@react-google-maps/api';
 import { Button } from 'react-bootstrap';
 
-    const AnyReactComponent = ({ text }) => <div>{text}</div>;
+  const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
   const containerStyle = {
     width: '100%',
@@ -18,15 +18,16 @@ import { Button } from 'react-bootstrap';
   };
 
   const areaBounds = { 
-    south: 42.040,
+    south: 42.035,
     east: -87.668370
   }
   const areaSize = {
     height: 0.005,
     width: 0.0065}
 
-  const onLoad = rectangle => {
-    console.log('rectangle: ', rectangle)
+  const rectOptions = {
+      strokeOpacity: 0.3,
+      fillOpacity: 0.1
   }
   
   function AreaRow(props){
@@ -38,13 +39,16 @@ import { Button } from 'react-bootstrap';
         west: props.east - (e + 1) * areaSize.width
         }
       }
-      return([...Array(6).keys()].map(
-          e =><Rectangle bounds={option(e)} />
+      return([...Array(7).keys()].map(
+          e =>
+          <Rectangle 
+          bounds={option(e)}
+          options={rectOptions} />
           ))
   }
 
   function AreaMap(props){
-      return([...Array(6).keys()].map(
+      return([...Array(7).keys()].map(
           e => <AreaRow south={props.south + e * areaSize.height} east = {props.east}/>
           ))
   }
