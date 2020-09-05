@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {MyComponent} from '../Map';
-import { Card, Row, Col, Button,Tag,Divider,Tabs,Checkbox } from 'antd';
+import { Card, Row, Col, Button,Tag,Divider,Tabs,Checkbox,List } from 'antd';
 import "./Home.css";
 import HealthInput from './HealthInput';
 
@@ -16,15 +16,90 @@ const defaultProps = {
   },
   zoom: 11
 };
+const drawerData = [
+    {
+      location:"North Campus",
+      good:true,
+      people:5,
+      hour:0.5,
+    },
+    {
+        location:"South Campus",
+        good:false,
+        people:5,
+        hour:1,
+      },
+      {
+        location:"Northeast Campus",
+        good:true,
+        people:5,
+        hour:1,
+      },
+      {
+        location:"West Campus",
+        good:true,
+        people:5,
+        hour:2,
+      },
+      {
+        location:"West Campus",
+        good:false,
+        people:5,
+        hour:3,
+      },
+      {
+        location:"Gillson Park Area",
+        good:true,
+        people:5,
+        hour:3,
+      },
+      {
+        location:"Downtown Evanston",
+        good:false,
+        people:5,
+        hour:4,
+      },
+      
+      {
+        location:"North Campus Area",
+        good:true,
+        people:5,
+        hour:5,
+      },
+]
 
 const Map = () =>{
     return (
         <Row>
-        <Col span={16}>
+        <Col span={18}>
         <MyComponent/>
         </Col>
-        <Col span={8}>
-        <Card hoverable title="Area Ratings" className="Card" boardered ={true}>haha</Card>
+        <Col span={6}>
+        <div class="newsList">
+          <List
+            dataSource={drawerData}
+            renderItem={item => (
+              <List.Item key={item.id}>
+                <Col>
+                  <Row>
+                    <Col><Tag color={item.good?"#2BD784 ":"#E64141"}>Area News</Tag></Col>
+                    <Col offset={5}><p className="minute_text">{item.hour} HOURS AGO</p></Col>
+                    </Row>
+                <Row>
+                    {item.good?
+                    <p><a className="div-link" href="https://www.google.com/" target="_blank" >
+                    {item.location}</a> has not been reported for one day. It's temporaly considered safe.</p>
+                    :
+                    <p><a className="div-link" href="https://www.google.com/" target="_blank" >
+                   {item.location}</a> has been reported by {item.people} people. Reduce traffic to this region.</p>}
+                
+                </Row>
+                </Col>
+              </List.Item>
+            )}
+          >
+          </List>
+          </div>
 
         </Col>
     </Row>

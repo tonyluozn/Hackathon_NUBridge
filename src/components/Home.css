@@ -45,3 +45,13 @@
 
     text-align: center;
 }
+
+.newsList{
+    height: 700px;
+    width:300px;
+    overflow-y: scroll;
+    margin-left: 15px;
+    padding: 10px;
+    background-color: #151B24;
+    border: 3px;
+}
