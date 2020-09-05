@@ -4,23 +4,28 @@ import { Link } from 'react-router-dom';
 import Routes from "./Routes";
 import "./App.css";
 import NavbarCollapse from 'react-bootstrap/NavbarCollapse';
+import logo from './logo.png'
 
 function App(props) {
   const [user, setUser] = useState(false);
   const [data, setData] = useState(null);
-
+  
   return (
   <div className="frame">
     <div className="NavContainer">
     <Navbar  expand="lg" className="NavBar">
       <Navbar.Brand href="/">
+      <img src={logo} 
+      alt="Logo" 
+      width="30"
+      height="30"/>
         <img
         className="Logo"
         alt=""
         src="agreement.svg"
         width="30"
         height="30"
-        />{' '}
+        />{' '} 
         <strong className="BrandText">NUBridge</strong>
       </Navbar.Brand>
 
