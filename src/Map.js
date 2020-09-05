@@ -44,7 +44,10 @@ import { Modal, Button } from 'antd';
         this.bound = props.bound;
     }
 
-    state = { visible: false };
+    state = { 
+        visible: false,
+        count: 0
+    };
 
     showModal = () => {
         this.setState({
@@ -54,9 +57,10 @@ import { Modal, Button } from 'antd';
 
     handleOk = e => {
         console.log(e);
-        this.setState({
-        visible: false,
-        });
+        // this.setState({
+        // visible: false,
+        // });
+        this.setState({count: this.state.count + 1});
     };
 
     handleCancel = e => {
@@ -73,15 +77,17 @@ import { Modal, Button } from 'antd';
             options={rectOptions} 
             onClick={this.showModal}/>
             <Modal
-            title="Basic Modal"
+            title="Area"
             visible={this.state.visible}
             onOk={this.handleOk}
             onCancel={this.handleCancel}
+            okText="Report"
             >
             <p>{this.bound.north}</p>
             <p>{this.bound.south}</p>
             <p>{this.bound.east}</p>
             <p>{this.bound.west}</p>
+            <p>{this.state.count}</p>
             </Modal>
         </>
         );
