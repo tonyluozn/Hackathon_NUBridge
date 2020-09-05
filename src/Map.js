@@ -22,9 +22,28 @@ import { Modal, Button } from 'antd';
     south: 42.035,
     east: -87.668370
   }
+
   const areaSize = {
     height: 0.005,
-    width: 0.0065}
+    width: 0.0065
+  }
+
+  function Options(count){
+      if (count >= 5) {
+        return {
+            strokeOpacity: 0.25,
+            fillColor: '#ff0000',
+            fillOpacity: Math.min(0.05 + (count - 5) * 0.05, 0.3)
+      }
+    }
+      else {
+        return{
+            strokeOpacity: 0.25,
+            fillColor: '#008000',
+            fillOpacity: 0.05 + (5 - count) * 0.05
+      }
+    }
+  }
 
   const rectOptions = {
       strokeOpacity: 0.3,
@@ -46,7 +65,7 @@ import { Modal, Button } from 'antd';
 
     state = { 
         visible: false,
-        count: 0
+        count: Math.floor(Math.random() * Math.floor(10))
     };
 
     showModal = () => {
@@ -56,25 +75,25 @@ import { Modal, Button } from 'antd';
     };
 
     handleOk = e => {
-        console.log(e);
-        // this.setState({
-        // visible: false,
-        // });
         this.setState({count: this.state.count + 1});
     };
 
     handleCancel = e => {
-        console.log(e);
         this.setState({
         visible: false,
         });
     };
 
+    diminish() {
+        this.setState({state: 
+            (this.state.count > 0)? this.state.count - 1: 0 });
+    }
+
     render() {
         return (
         <>
             <Rectangle bounds={this.bound} 
-            options={rectOptions} 
+            options={Options(this.state.count)} 
             onClick={this.showModal}/>
             <Modal
             title="Area"
@@ -83,40 +102,81 @@ import { Modal, Button } from 'antd';
             onCancel={this.handleCancel}
             okText="Report"
             >
-            <p>{this.bound.north}</p>
-            <p>{this.bound.south}</p>
-            <p>{this.bound.east}</p>
-            <p>{this.bound.west}</p>
-            <p>{this.state.count}</p>
+            <p>
+                Coordinate: 
+            </p>
+            <p>
+                North - {this.bound.north}, 
+                South - {this.bound.south},
+            </p>
+            <p>
+                East - {this.bound.east},
+                West - {this.bound.west}
+            </p>
+            <p>Current Status: {this.state.count}</p>
             </Modal>
         </>
         );
     }
 }
 
-  function AreaRow(props){
-      function option(e){  
-        return {
-        north: props.south + areaSize.height,
-        south: props.south,
-        east: props.east - e * areaSize.width,
-        west: props.east - (e + 1) * areaSize.width
-        }
-      }
-      return([...Array(gridSize).keys()].map(
-          e =>
-          <Grid bound={option(e)} key={e}/>
-          ))
-  }
+class AreaRow extends React.Component{
+    constructor(props){
+        super(props);
+        this.south = props.south;
+        this.east = props.east;
+        console.log(this.south);
+        this.Row = [...Array(gridSize).keys()].map(
+            e =><Grid bound={option(e, this.south, this.east)} 
+            key={e}/>)
+    }
 
-  function AreaMap(props){
-      return([...Array(gridSize).keys()].map(
-          e => <AreaRow south={props.south + e * areaSize.height} east = {props.east} key={e}/>
-          ))
+    diminish(){
+        this.Row.map(e => e.diminish)
+    }
+
+    render(){
+        return this.Row
+    }
+}
+
+class AreaMap extends React.Component{
+    constructor(props){
+        super(props)
+        this.south = props.south
+        this.east = props.east
+        this.areaMap = [...Array(gridSize).keys()].map(
+            e => 
+            <AreaRow 
+            south={this.south + e * areaSize.height} 
+            east = {this.east} 
+            key={e}/>
+            ) 
+        // this.timer = setInterval(this.diminish, 1000)
+    }
+ 
+    diminish(){
+        setInterval(this.areaMap.map(e => e.diminish), 1000)
+    }
+
+    render(){
+        return this.areaMap
+    }
+}
+ 
+
+
+  function option(e, south, east){
+    let ans = {
+        north: south + areaSize.height,
+        south: south,
+        east: east - e * areaSize.width,
+        west: east - (e + 1) * areaSize.width   
+    }
+    return ans
   }
 
   export function MyComponent() {
-
     return (
       <LoadScript
         googleMapsApiKey=""
@@ -128,7 +188,6 @@ import { Modal, Button } from 'antd';
           zoom = {zoomRate}
           
         >
-          <Marker position={campusCenter}/>
           <AreaMap south={areaBounds.south} east={areaBounds.east}/>
           <></>
         </GoogleMap>

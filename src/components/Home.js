@@ -75,7 +75,7 @@ const Map = () =>{
         <MyComponent/>
         </Col>
         <Col span={6}>
-        <div class="newsList">
+        <div className="newsList">
           <List
             dataSource={drawerData}
             renderItem={item => (
