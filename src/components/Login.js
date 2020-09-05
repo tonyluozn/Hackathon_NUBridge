@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
+import MyComponent from '../Map'
 import "./Login.css";
 
 function Login(props) {
@@ -39,6 +40,7 @@ function Login(props) {
           Login
         </Button>
       </form>
+      <MyComponent></MyComponent>
     </div>
   );
 }

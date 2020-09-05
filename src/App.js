@@ -11,7 +11,7 @@ function App(props) {
 
   return (
   <>
-    <Container className="NavContainer">
+    <div className="NavContainer">
     <Navbar bg="light" expand="lg" className="NavBar">
       <Navbar.Brand href="/">
         <img
@@ -29,7 +29,7 @@ function App(props) {
         : notLoggedIn()}
 
     </Navbar>
-    </Container>
+    </div>
 
     {renderRoutes()}
   </>
