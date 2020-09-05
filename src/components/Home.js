@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import {MyComponent} from '../Map';
 import { Card, Row, Col, Button,Tag,Divider,Tabs } from 'antd';
 import "./Home.css";
+import HealthInput from './HealthInput';
 
 const defaultProps = {
   center: {
@@ -46,7 +47,7 @@ export default function Home(props) {
                
             </TabPane>
             <TabPane tab="Status update" key="3">
-
+            <HealthInput/>
             </TabPane>
         </Tabs>
       </div>
