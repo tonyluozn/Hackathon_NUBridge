@@ -21,7 +21,9 @@ import { Button } from 'react-bootstrap';
     south: 42.040,
     east: -87.668370
   }
-  const areaSize = 0.005
+  const areaSize = {
+    height: 0.005,
+    width: 0.0065}
 
   const onLoad = rectangle => {
     console.log('rectangle: ', rectangle)
@@ -30,10 +32,10 @@ import { Button } from 'react-bootstrap';
   function AreaRow(props){
       function option(e){  
         return {
-        north: props.south +  areaSize,
+        north: props.south +  areaSize.height,
         south: props.south,
-        east: props.east - e * areaSize,
-        west: props.east - (e + 1) * areaSize
+        east: props.east - e * areaSize.width,
+        west: props.east - (e + 1) * areaSize.width
         }
       }
       return([...Array(6).keys()].map(
@@ -43,7 +45,7 @@ import { Button } from 'react-bootstrap';
 
   function AreaMap(props){
       return([...Array(6).keys()].map(
-          e => <AreaRow south={props.south + e * areaSize} east = {props.east}/>
+          e => <AreaRow south={props.south + e * areaSize.height} east = {props.east}/>
           ))
   }
 
@@ -57,7 +59,7 @@ import { Button } from 'react-bootstrap';
           mapContainerStyle={containerStyle}
           defaultCenter={campusCenter}
           center={campusCenter}
-          zoom = {15}
+          zoom = {14}
           
         >
           <Marker position={campusCenter}/>
