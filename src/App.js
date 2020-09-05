@@ -51,24 +51,11 @@ function App(props) {
   function loggedIn() {
     return (<>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <NavbarCollapse>
-        <Nav.Link href="/search" className="NavText">
-          Class search
-        </Nav.Link>
-        <Nav.Link href="/usercenter" className="NavText">
-          User center
-        </Nav.Link>
-        <Nav.Link href="/"  className="NavText">
-          Logout
-        </Nav.Link>
-      </NavbarCollapse>
 
       <NavbarCollapse className="justify-content-end">
-        <Link to="/message">
-          <Button variant="outline-secondary">Inbox
-            <Badge className="MessageBadge" variant="dark"> 0 </Badge>
-          </Button>
-        </Link>
+      <Nav.Link href="/"  className="NavText">
+          Logout
+        </Nav.Link>
       </NavbarCollapse>
       </>);
   }

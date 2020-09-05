@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { ListGroup, Button, Col, Row, Container } from "react-bootstrap";
-import {MyComponent} from '../Map'
+import {MyComponent} from '../Map';
+import { Card, Row, Col, Button,Tag,Divider,Tabs } from 'antd';
 import "./Home.css";
 
 const defaultProps = {
@@ -14,10 +14,20 @@ const defaultProps = {
 
 export default function Home(props) {
   return (
-    <Container className="Home">
-      
-        <MyComponent></MyComponent>
+      <div className="page">
+      <p>what'</p>
+      <Row>
+          <Col span={16}>
+          <MyComponent/>
+          </Col>
+          <Col span={8}>
+          <Card>haha</Card>
 
-    </Container>
+          </Col>
+      </Row>
+      
+
+      </div>
+
   );
 }

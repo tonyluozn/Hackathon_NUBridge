@@ -3,7 +3,8 @@ import {
   FormText,
   FormGroup,
   FormControl,
-  FormLabel
+  FormLabel,
+  Button
 } from "react-bootstrap";
 import { useFormFields } from "./hooksLib";
 import "./Signup.css";
@@ -59,15 +60,13 @@ function Signup(props) {
           />
           <FormText>Please check your email for the code.</FormText>
         </FormGroup>
-        {/* <LoaderButton
+        <Button
           block
           type="submit"
-          bsSize="large"
-          isLoading={isLoading}
-          disabled={!validateConfirmationForm()}
+          disabled={isLoading||!validateForm()}
         >
-          Verify
-        </LoaderButton> */}
+          Signup
+        </Button>
       </form>
     );
   }
@@ -100,15 +99,13 @@ function Signup(props) {
             value={fields.confirmPassword}
           />
         </FormGroup>
-        {/* <LoaderButton
+        <Button
           block
           type="submit"
-          bsSize="large"
-          isLoading={isLoading}
-          disabled={!validateForm()}
+          disabled={isLoading||!validateForm()}
         >
           Signup
-        </LoaderButton> */}
+        </Button>
       </form>
     );
   }
