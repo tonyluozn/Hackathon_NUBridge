@@ -11,22 +11,44 @@ const defaultProps = {
   zoom: 11
 };
 
+const Map = () =>{
+    return (
+        <Row>
+        <Col span={16}>
+        <MyComponent/>
+        </Col>
+        <Col span={8}>
+        <Card>haha</Card>
+
+        </Col>
+    </Row>
+    
+    );
+};
 
 export default function Home(props) {
+
+   
+   const { TabPane } = Tabs;
+   function callback(key) {
+        console.log(key);
+   }
+
   return (
       <div className="page">
-      <p>what'</p>
-      <Row>
-          <Col span={16}>
-          <MyComponent/>
-          </Col>
-          <Col span={8}>
-          <Card>haha</Card>
 
-          </Col>
-      </Row>
-      
+      <br/>
+      <Tabs onChange={callback} type="card">
+            <TabPane tab="Map" key="1">
+            <Map/>
+            </TabPane>
+            <TabPane tab="Health Status" key="2">
+               
+            </TabPane>
+            <TabPane tab="Status update" key="3">
 
+            </TabPane>
+        </Tabs>
       </div>
 
   );

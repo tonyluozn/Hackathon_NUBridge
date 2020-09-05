@@ -5,6 +5,9 @@
 .App-logo {
   height: 40vmin;
 }
+.body{
+  background-color: #262E3A;
+}
 
 .App-header {
   background-color: #282c34;
