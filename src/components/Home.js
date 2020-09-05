@@ -32,6 +32,63 @@ const Map = () =>{
     );
 };
 
+
+const HealthStatus = () =>{
+    return (
+        <div className="scrolling-wrapper">
+        <Row>
+        <Card hoverable title="Health Status" className="Card" boardered ={true}>
+                    <p className="name">Name: Tony Luo</p>
+                    <p className="status" style={{color:"#2BD784"}}>Normal</p>
+                    <p className="date">2020/9/6</p>
+                    </Card>
+                    <Card hoverable title="Health Status" className="Card" boardered ={true}>
+                    <p className="name">Name: Tony Luo</p>
+                    <p className="status" style={{color:"#2BD784"}}>Normal</p>
+                    <p className="date">2020/9/5</p>
+                    </Card>
+                    <Card hoverable title="Health Status" className="Card" boardered ={true}>
+                    <p className="name">Name: Tony Luo</p>
+                    <p className="status" style={{color:"#E64141"}}>Warning</p>
+                    <p className="date" >Specific symptoms: Coughing</p>
+                    <p className="date">2020/9/4</p>
+                    </Card>
+                    <Card hoverable title="Health Status" className="Card" boardered ={true}>
+                    <p className="name">Name: Tony Luo</p>
+                    <p className="status" style={{color:"#2BD784"}}>Normal</p>
+                    <p className="date">2020/9/3</p>
+                    </Card>
+                    <Card hoverable title="Health Status" className="Card" boardered ={true}>
+                    <p className="name">Name: Tony Luo</p>
+                    <p className="status" style={{color:"#2BD784"}}>Normal</p>
+                    <p className="date">2020/9/2</p>
+                    </Card>
+                    <Card hoverable title="Health Status" className="Card" boardered ={true}>
+                    <p className="name">Name: Tony Luo</p>
+                    <p className="status" style={{color:"#2BD784"}}>Normal</p>
+                    <p className="date">2020/9/1</p>
+                    </Card>
+                    <Card hoverable title="Health Status" className="Card" boardered ={true}>
+                    <p className="name">Name: Tony Luo</p>
+                    <p className="status" style={{color:"#E64141"}}>Warning</p>
+                    <p className="date" >Risky behaviour: large gathering</p>
+                    <p className="date">2020/8/31</p>
+                    </Card>
+                    <Card hoverable title="Health Status" className="Card" boardered ={true}>
+                    <p className="name">Name: Tony Luo</p>
+                    <p className="status" style={{color:"#2BD784"}}>Normal</p>
+                    <p className="date">2020/8/30</p>
+                    </Card>
+
+        </Row>
+                   
+    
+        </div>
+        
+
+    
+    );
+};
 export default function Home(props) {
   
   // return (
@@ -56,7 +113,7 @@ export default function Home(props) {
             <Map/>
             </TabPane>
             <TabPane tab="Health Status" key="2">
-           
+            <HealthStatus/>
             </TabPane>
             <TabPane tab="Status update" key="3">
             <HealthInput/>

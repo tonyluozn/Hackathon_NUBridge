@@ -9,4 +9,34 @@
     margin:20px;
     margin-top: 0px;
     padding:10px;
+    width:300px;
+}
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+}
+
+.name{  
+    font-size: 20px;
+    font-weight:700;
+    margin:30px;   
+    text-align: center;
+}
+
+.status{
+    font-size:30px;
+    font-weight:700;
+
+    margin-bottom:200px;
+    text-align: center;
+}
+
+.date{
+    font-size: 15px;
+    margin:20px;
+
+    text-align: center;
 }
