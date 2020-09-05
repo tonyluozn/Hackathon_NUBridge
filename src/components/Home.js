@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import {MyComponent} from '../Map';
 import { Card, Row, Col, Button,Tag,Divider,Tabs,Checkbox } from 'antd';
 import "./Home.css";
+import HealthInput from './HealthInput';
 
 // import { createFromIconfontCN } from '@ant-design/icons';
 
@@ -58,6 +59,7 @@ export default function Home(props) {
            
             </TabPane>
             <TabPane tab="Status update" key="3">
+            <HealthInput/>
             <h1> If you identify yourself having any of the symptoms, please check below</h1>
     <Checkbox.Group style = {{ width: '100%' }} onChange = {onChange}>
         <Row>
@@ -96,6 +98,7 @@ export default function Home(props) {
             </Col>
         </Row>
         </Checkbox.Group>  
+            
             </TabPane>
         </Tabs>
       </div>
