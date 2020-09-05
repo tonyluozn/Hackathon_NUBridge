@@ -36,13 +36,13 @@ import { Button } from 'react-bootstrap';
         west: props.east - (e + 1) * areaSize
         }
       }
-      return([...Array(5).keys()].map(
+      return([...Array(6).keys()].map(
           e =><Rectangle bounds={option(e)} />
           ))
   }
 
   function AreaMap(props){
-      return([...Array(5).keys()].map(
+      return([...Array(6).keys()].map(
           e => <AreaRow south={props.south + e * areaSize} east = {props.east}/>
           ))
   }
