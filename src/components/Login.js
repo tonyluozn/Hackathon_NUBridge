@@ -36,7 +36,7 @@ function Login(props) {
             type="password"
           />
         </FormGroup>
-        <Button block bsSize="large" disabled={!validateForm()} style={{backgroundColor:"#0D6EF1"}} type="submit">
+        <Button block bsSize="large" disabled={!validateForm()} style={{marginBottom:"30px"}} type="submit">
           Login
         </Button>
       </form>

@@ -36,6 +36,8 @@ const Map = () =>{
 const HealthStatus = () =>{
     return (
         <div className="scrolling-wrapper">
+        <p className="header">Your Health Status History</p>
+        <br/>
         <Row>
         <Card hoverable title="Health Status" className="Card" boardered ={true}>
                     <p className="name">Name: Tony Luo</p>

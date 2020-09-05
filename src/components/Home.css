@@ -18,7 +18,12 @@
     white-space: nowrap;
 
 }
-
+.header{
+    font-size: 35px;
+    font-weight:900;
+    margin:20px;   
+    text-align: center;
+}
 .name{  
     font-size: 20px;
     font-weight:700;
