@@ -12,7 +12,7 @@ function App(props) {
   return (
   <>
     <div className="NavContainer">
-    <Navbar bg="light" expand="lg" className="NavBar">
+    <Navbar  expand="lg" className="NavBar">
       <Navbar.Brand href="/">
         <img
         className="Logo"
@@ -53,8 +53,8 @@ function App(props) {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
       <NavbarCollapse className="justify-content-end">
-      <Nav.Link href="/"  className="NavText">
-          Logout
+      <Nav.Link href="/" >
+         Logout
         </Nav.Link>
       </NavbarCollapse>
       </>);
@@ -63,8 +63,8 @@ function App(props) {
   function notLoggedIn() {
     return (
       <Nav>
-        <Nav.Link href="/signup">Signup</Nav.Link>
-        <Nav.Link href="/login">Login</Nav.Link>
+        <Nav.Link href="/signup" >Sign up</Nav.Link>
+        <Nav.Link href="/login" >Login</Nav.Link>
       </Nav>
     );
   }
