@@ -7,6 +7,7 @@ import {
   Button
 } from "react-bootstrap";
 import { useFormFields } from "./hooksLib";
+import { Row, Col, Input, Radio, Divider, Checkbox } from 'antd';
 import "./Signup.css";
 
 function Signup(props) {
@@ -70,7 +71,12 @@ function Signup(props) {
       </form>
     );
   }
-
+  const plainOptions = ['Student', 'Staff', 'Professor'];
+  const [step_state, setStep_state] = React.useState('none');
+  const onChange_step = e => {
+    console.log('radio checked', e.target.value);
+    setStep_state(e.target.value);
+  };
   function renderForm() {
     return (
       <form onSubmit={handleSubmit}>
@@ -99,6 +105,17 @@ function Signup(props) {
             value={fields.confirmPassword}
           />
         </FormGroup>
+        <FormGroup controlId="DormName" bsSize="large">
+          <FormLabel>Dorm Name</FormLabel>
+          <FormControl
+            type="DormName"
+            onChange={handleFieldChange}
+          />
+        </FormGroup>
+        <Col span={10}><p className="title">How do you identify yourself?</p>
+        <Radio.Group options={plainOptions} onChange={onChange_step} value={step_state} />
+        </Col>
+        <br></br>
         <Button
           block
           type="submit"

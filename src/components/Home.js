@@ -60,7 +60,7 @@ export default function Home(props) {
             </TabPane>
             <TabPane tab="Status update" key="3">
             <HealthInput/>
-            <h1> If you identify yourself having any of the symptoms, please check below</h1>
+            {/* <h1> If you identify yourself having any of the symptoms, please check below</h1>
     <Checkbox.Group style = {{ width: '100%' }} onChange = {onChange}>
         <Row>
             <Col span = {8}>
@@ -97,7 +97,7 @@ export default function Home(props) {
                 <Checkbox value = "Diarrhea">Diarrhea"</Checkbox>
             </Col>
         </Row>
-        </Checkbox.Group>  
+        </Checkbox.Group>   */}
             
             </TabPane>
         </Tabs>
