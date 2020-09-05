@@ -21,7 +21,7 @@ import { Button } from 'react-bootstrap';
 
     return (
       <LoadScript
-        googleMapsApiKey="AIzaSyCoPHbDUrvtO6_oeIcph0x2TX-SlFbc-u4"
+        googleMapsApiKey=""
       >
         <GoogleMap
           mapContainerStyle={containerStyle}
