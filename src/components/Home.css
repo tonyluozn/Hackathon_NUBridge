@@ -9,4 +9,49 @@
     margin:20px;
     margin-top: 0px;
     padding:10px;
+    width:300px;
+}
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+}
+.header{
+    font-size: 35px;
+    font-weight:900;
+    margin:20px;   
+    text-align: center;
+}
+.name{  
+    font-size: 20px;
+    font-weight:700;
+    margin:30px;   
+    text-align: center;
+}
+
+.status{
+    font-size:30px;
+    font-weight:700;
+
+    margin-bottom:200px;
+    text-align: center;
+}
+
+.date{
+    font-size: 15px;
+    margin:20px;
+
+    text-align: center;
+}
+
+.newsList{
+    height: 700px;
+    width:300px;
+    overflow-y: scroll;
+    margin-left: 15px;
+    padding: 10px;
+    background-color: #151B24;
+    border: 3px;
 }
