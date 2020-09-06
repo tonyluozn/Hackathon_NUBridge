@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Button, Input, Radio, Divider, Checkbox } from 'antd';
-
+import './HealthInput.css';
 
 const HealthInput = () =>{
 
@@ -39,7 +39,7 @@ const HealthInput = () =>{
                <Col span={10}>
                <p className="title">Enter your body temperature</p>
                 <Input  placeholder="36.5 C" size='large'  style={{ width: 400 }}/>
-              <p>Measure your temperature in C.</p>
+              <p>Measure your temperature in Celsius.</p>
                </Col>
               
              </Row>
@@ -136,7 +136,7 @@ const HealthInput = () =>{
              <div style={{width:1000}}>
              <Divider orientation="left" ></Divider>
              </div>
-             <br/><br/><Button type="primary" style={{height: 40, width:120}}>Submit</Button>
+             <br/><br/><div className="button"><Button type="primary" style={{height: 40, width:120}}>Submit</Button></div>
     
           </>
         );

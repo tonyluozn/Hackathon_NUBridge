@@ -1,0 +1,18 @@
+.button{
+    margin:50px;
+}
+
+.circle{
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+}
+
+.circle-text{
+    width: 50px;
+    text-align: center;
+    font-size: 20px;
+}
