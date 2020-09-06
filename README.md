@@ -3,7 +3,9 @@
 作为互联网时代以来最大的一场流行病，COVID-19 对人们的社交模式和社交频率造成了空前的挑战和影响。因此，提高疫情后新常态下的线下社交变得更安全、更自然，已成为后疫情时代下重要的社会课题。
 基于目前的社会现状和大众的需求，我们的产品Safe on Campus旨在优化学校内及周边人群的线下社交活动体验。
 
+DEMO视频网址(Bilibili): https://www.bilibili.com/video/BV1pv411C7Lm/
 DEMO视频网址:https://pan.baidu.com/s/10wfQxmwVPjCBQ-uQSU_NsA 提取码87g4
+
 DEMO视频备份: https://github.com/tonyluozn/Hackathon_NUBridge/blob/master/NUBridge%20demo.mp4
 
 ——————————————以下为React App信息————————————————————
