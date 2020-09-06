@@ -71,7 +71,7 @@ function Signup(props) {
       </form>
     );
   }
-  const plainOptions = ['Student', 'Staff', 'Professor'];
+  const plainOptions = ['Student', 'Staff', 'Professor', 'Resident'];
   const [step_state, setStep_state] = React.useState('none');
   const onChange_step = e => {
     console.log('radio checked', e.target.value);
