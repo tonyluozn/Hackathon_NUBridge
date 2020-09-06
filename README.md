@@ -4,7 +4,7 @@
 基于目前的社会现状和大众的需求，我们的产品Safe on Campus旨在优化学校内及周边人群的线下社交活动体验。
 
 DEMO视频网址:https://pan.baidu.com/s/10wfQxmwVPjCBQ-uQSU_NsA 提取码87g4
-—————————————————————————————————————————————————————————————以下为React App信息—————————————————————————————————————————————————————————————
+——————————————以下为React App信息————————————————————
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
