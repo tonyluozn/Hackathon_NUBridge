@@ -4,6 +4,7 @@
 基于目前的社会现状和大众的需求，我们的产品Safe on Campus旨在优化学校内及周边人群的线下社交活动体验。
 
 DEMO视频网址(Bilibili): https://www.bilibili.com/video/BV1pv411C7Lm/
+
 DEMO视频网址:https://pan.baidu.com/s/10wfQxmwVPjCBQ-uQSU_NsA 提取码87g4
 
 DEMO视频备份: https://github.com/tonyluozn/Hackathon_NUBridge/blob/master/NUBridge%20demo.mp4
