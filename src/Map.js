@@ -179,7 +179,7 @@ class AreaMap extends React.Component{
   export function MyComponent() {
     return (
       <LoadScript
-        googleMapsApiKey=""
+        googleMapsApiKey="AIzaSyCoPHbDUrvtO6_oeIcph0x2TX-SlFbc-u4"
       >
         <GoogleMap
           mapContainerStyle={containerStyle}
